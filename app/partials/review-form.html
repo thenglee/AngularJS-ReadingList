@@ -69,10 +69,10 @@
 
     <fieldset class="form-group">
       <label class="control-label col-sm-2" >Genre:</label>
-      <div class="genre">
-        <label class="genre-label form-control">
-          <input type="checkbox" name="genre" />
-          Genre
+      <div class="genre" >
+        <label for="{{genre}}" class="genre-label form-control" ng-repeat="genre in genres">
+          <input type="checkbox" name="genre" id="{{genre}}" ng-model="reviewFormCtrl.book.genres[genre]" />
+          {{genre}}
         </label>
       </div>
     </fieldset>
