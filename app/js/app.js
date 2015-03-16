@@ -13,8 +13,10 @@ angular.module('readingList', [])
 	.directive('bookGenres', function(){
 		return{
 			restrict: 'E',
-			templateUrl: 'partials/book-genres.html'
-
+			templateUrl: 'partials/book-genres.html',
+			scope: {
+				genres: '='
+			}
 		};
 	})
 
